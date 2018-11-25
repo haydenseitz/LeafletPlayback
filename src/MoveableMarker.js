@@ -76,6 +76,11 @@ L.Playback.MoveableMarker = L.Marker.extend({
         transform += ' translate(' + -a.x + 'px, ' + -a.y + 'px)';
         transform += ' rotate(' + this.options.iconAngle + 'deg)';
         transform += ' translate(' + a.x + 'px, ' + a.y + 'px)';
+        if(typeof this.options.transformOrigin !== 'undefined' 
+            && this.options.transformOrigin)
+        {
+            i.style['transform-origin'] += this.options.transformOrigin
+        }
         i.style[L.DomUtil.TRANSFORM] += transform;
     },
     setIconAngle: function (iconAngle) {
