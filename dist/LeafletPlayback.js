@@ -287,6 +287,9 @@ L.Playback.Track = L.Class.extend({
 				this._orientations[t] = this._orientReal ? this._directionOfRealPoint(currentOrientation, nextOrientation, ratio) : this._directionOfPoint(currSample,nextSample);
                 previousOrientation = this._orientations[t];
             } else {
+		rem = tickLen - tmod;
+                ratio = rem / (nextSampleTime - currSampleTime);
+                t += rem;
                 this._ticks[t] = currSample;
 				this._orientations[t] = this._orientReal ? this._directionOfRealPoint(currentOrientation, nextOrientation, ratio) : this._directionOfPoint(currSample,nextSample);
                 previousOrientation = this._orientations[t];
