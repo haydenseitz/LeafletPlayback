@@ -4,6 +4,7 @@
   "author": "Saiful Azhar <saifulazr@gmail.com>",
   "contributors": [],
   "description": "This is a fork of leaflet playback library, hallahan/LeafletPlayback",
+  "main": "dist/LeafletPlayback.min.js",
   "homepage": "",
   "repository": {
     "type": "git",
